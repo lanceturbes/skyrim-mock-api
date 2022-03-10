@@ -1,5 +1,12 @@
 import { rest } from "msw";
 
+export type HoldInfo = {
+  name: string;
+  capital: string;
+  jarl: string;
+  allegiance: "Stormcloak" | "Imperial" | "Neutral";
+};
+
 export const handlers = [
   rest.get("/api/holds", (req, res, ctx) => {
     return res(

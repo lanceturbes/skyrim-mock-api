@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HoldInfo } from "./mocks/handlers";
 
 const initialData = {
   holds: [],
@@ -27,23 +28,16 @@ const App = () => {
       <button onClick={() => handleReset("holds")}>Reset</button>
 
       {APIData.holds &&
-        APIData.holds.map(
-          (hold: {
-            name: string;
-            capital: string;
-            jarl: string;
-            allegiance: string;
-          }) => {
-            return (
-              <div>
-                <h3>{hold.name}</h3>
-                <p>Capital: {hold.capital}</p>
-                <p>Jarl: {hold.jarl}</p>
-                <p>Allegiance: {hold.allegiance}</p>
-              </div>
-            );
-          }
-        )}
+        APIData.holds.map((hold: HoldInfo) => {
+          return (
+            <div>
+              <h3>{hold.name}</h3>
+              <p>Capital: {hold.capital}</p>
+              <p>Jarl: {hold.jarl}</p>
+              <p>Allegiance: {hold.allegiance}</p>
+            </div>
+          );
+        })}
     </div>
   );
 };
