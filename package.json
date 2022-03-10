@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "setup-msw": "msw init dist --save"
   },
   "repository": {
     "type": "git",
