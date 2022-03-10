@@ -24,10 +24,40 @@ export const handlers = [
           allegiance: "Imperial",
         },
         {
+          name: "Hjaalmarch",
+          capital: "Morthal",
+          jarl: "Idgrod Ravencrone",
+          allegiance: "Imperial",
+        },
+        {
+          name: "The Pale",
+          capital: "Dawnstar",
+          jarl: "Skald the Elder",
+          allegiance: "Stormcloak",
+        },
+        {
+          name: "The Reach",
+          capital: "Markarth",
+          jarl: "Igmund",
+          allegiance: "Imperial",
+        },
+        {
+          name: "The Rift",
+          capital: "Riften",
+          jarl: "Laila Law-Giver",
+          allegiance: "Stormcloak",
+        },
+        {
           name: "Whiterun",
           capital: "Whiterun",
           jarl: "Balgruuf the Greater",
           allegiance: "Neutral",
+        },
+        {
+          name: "Winterhold",
+          capital: "Winterhold",
+          jarl: "Korir",
+          allegiance: "Stormcloak",
         },
       ])
     );
