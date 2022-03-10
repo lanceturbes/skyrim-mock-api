@@ -2,9 +2,10 @@
   "name": "skyrim-mock-api",
   "version": "0.0.1",
   "description": "Mock API containing Skyrim towns and NPCs",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,16 @@
     "url": "https://github.com/lanceturbes/skyrim-mock-api/issues"
   },
   "homepage": "https://github.com/lanceturbes/skyrim-mock-api#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
-    "msw": "^0.39.1"
+    "msw": "^0.39.1",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10"
+  },
+  "msw": {
+    "workerDirectory": "dist"
   }
 }
