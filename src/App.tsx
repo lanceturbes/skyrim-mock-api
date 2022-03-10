@@ -1,22 +1,33 @@
 import React, { useState } from "react";
 
-const App = () => {
-  const [holds, setHolds] = useState([]);
+const initialData = {
+  holds: [],
+};
 
-  const handleGetHolds = async () => {
+const App = () => {
+  const [APIData, setAPIData] = useState(initialData);
+
+  const handleFetchHolds = async () => {
     fetch("/api/holds", { method: "GET" })
       .then((res) => res.json())
-      .then(setHolds);
+      .then((data) => setAPIData({ ...APIData, holds: data }));
+  };
+
+  const handleReset = (data: string) => {
+    setAPIData({ ...APIData, [data]: [] });
   };
 
   return (
     <div>
       <h1>Skyrim API</h1>
 
-      <button onClick={handleGetHolds}>Get Holds</button>
+      <h2>Holds</h2>
 
-      {holds &&
-        holds.map(
+      <button onClick={handleFetchHolds}>Fetch "Hold" Data</button>
+      <button onClick={() => handleReset("holds")}>Reset</button>
+
+      {APIData.holds &&
+        APIData.holds.map(
           (hold: {
             name: string;
             capital: string;
