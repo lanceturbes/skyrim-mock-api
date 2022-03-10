@@ -1,0 +1,22 @@
+{
+  "name": "skyrim-mock-api",
+  "version": "0.0.1",
+  "description": "Mock API containing Skyrim towns and NPCs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lanceturbes/skyrim-mock-api.git"
+  },
+  "author": "Lance Turbes Jr.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lanceturbes/skyrim-mock-api/issues"
+  },
+  "homepage": "https://github.com/lanceturbes/skyrim-mock-api#readme",
+  "devDependencies": {
+    "msw": "^0.39.1"
+  }
+}
