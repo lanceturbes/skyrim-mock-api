@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HoldCard from "./components/HoldCard";
 import { HoldInfo } from "./mocks/handlers";
 
 const initialData = {
@@ -28,16 +29,7 @@ const App = () => {
       <button onClick={() => handleReset("holds")}>Reset</button>
 
       {APIData.holds &&
-        APIData.holds.map((hold: HoldInfo) => {
-          return (
-            <div>
-              <h3>{hold.name}</h3>
-              <p>Capital: {hold.capital}</p>
-              <p>Jarl: {hold.jarl}</p>
-              <p>Allegiance: {hold.allegiance}</p>
-            </div>
-          );
-        })}
+        APIData.holds.map((hold: HoldInfo) => <HoldCard hold={hold} />)}
     </div>
   );
 };
