@@ -13,7 +13,7 @@ npm run setup-msw # install MSW to the project "dist" folder
 
 ## Usage
 
-The app uses Parcel to serve the frontend. Simply run `npm start` from the root of the project to start a development server on `localhost:1234`, and visit that URL to view the application.
+The app uses Parcel to serve the frontend. Simply run `npm start` from the root of the project to start a development server on `http://localhost:1234`, and visit that URL to view the application.
 
 ## License
 
